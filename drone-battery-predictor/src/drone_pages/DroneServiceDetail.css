@@ -1,0 +1,32 @@
+/* drone_pages/DroneServiceDetail.css */
+.detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: var(--block);
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.detail-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detail-image img {
+  width: 100%;
+  height: auto;
+}
+
+.service-info {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

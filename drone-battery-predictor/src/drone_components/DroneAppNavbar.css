@@ -1,0 +1,41 @@
+/* drone_components/DroneAppNavbar.css */
+.navbar {
+  background: var(--header) !important;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--header-text) !important;
+  font-size: 20px;
+  transition: .2s;
+}
+
+.navbar-brand:hover {
+  color: var(--header-hover) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--header-text) !important;
+  font-size: 18px;
+  font-weight: 500;
+  transition: .2s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--header-hover) !important;
+}
+
+.navbar-collapse.justify-between {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+}
+
+.left-nav .nav-link {
+  margin-right: auto;
+}
+
+.right-nav .nav-link {
+  margin-left: auto;
+}

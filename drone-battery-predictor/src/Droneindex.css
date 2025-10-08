@@ -1,0 +1,200 @@
+/* Droneindex.css */
+:root {
+  --header: #ffffd2;       /* Шапка */
+  --background: #ffefdc;   /* Фон страницы */
+  --block: #ffffcc;        /* Карточки */
+  --text: #000000;         /* Основной текст */
+  --border: #999;          /* Граница блоков */
+  --button: #4cb050;       /* Цвет кнопок */
+  --button-text: #ffffff;  /* Текст на кнопках */
+  --header-text: #1F58C8;  /* Текст в хедере и заголовках */
+  --hover: #45a049;        /* Цвет при наведении */
+  --header-hover: #fb0707; /* Цвет при наведении на текст хедера */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  background: var(--background);
+  color: var(--text);
+}
+
+h1 {
+  color: var(--header-text);
+  font-weight: 500;
+  text-align: center;
+  margin: 24px 0 16px;
+  font-size: 22px;
+}
+
+.navbar {
+  background: var(--header) !important;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--header-text) !important;
+  font-size: 20px;
+  transition: .2s;
+}
+
+.navbar-brand:hover {
+  color: var(--header-hover) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--header-text) !important;
+  font-size: 18px;
+  font-weight: 500;
+  transition: .2s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--header-hover) !important;
+}
+
+.breadcrumb {
+  background: transparent;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: var(--header-text);
+  transition: .2s;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--header-hover);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: var(--text);
+  padding: 0 8px;
+}
+
+.service-card {
+  background: var(--block);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: .2s;
+  width: 100%;
+  color: var(--text);
+}
+
+/*.service-card:hover {
+  transform: translateY(-5px);
+}*/
+
+.card-image-wrap {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.service-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.category {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.details-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: var(--button);
+  color: var(--button-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s;
+  text-decoration: none;
+  border: none;
+  font-size: 15px;
+}
+
+.details-btn:hover {
+  background: var(--hover);
+}
+.services-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+
+.services-search {
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 32px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.services-search input,
+.services-search button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+}
+
+.services-search input {
+  flex: 1;
+  background: var(--background);
+  color: var(--text);
+}
+
+.services-search button {
+  border: none;
+  background: var(--button);
+  color: var(--button-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.services-search button:hover {
+  background: var(--hover);
+}
