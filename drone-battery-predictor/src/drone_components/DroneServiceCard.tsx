@@ -5,7 +5,7 @@ import type { DroneService } from "../DroneServiceTypes";
 import "./DroneServiceCard.css";
 
 export default function DroneServiceCard({ service }: { service: DroneService }) {
-  const imageUrl = service.image || "http://localhost:9000/images/img.jpg";
+  const imageUrl = service.image || "https://billion72.ru/bitrix/templates/billion/assets/img/nf.png";
 
   return (
     <div className="service-card">
