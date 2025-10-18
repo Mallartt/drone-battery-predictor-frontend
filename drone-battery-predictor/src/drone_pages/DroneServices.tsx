@@ -34,7 +34,7 @@ export default function DroneServices() {
   return (
     <div className="services-wrapper">
       <DroneBreadcrumbs
-        items={[{ label: "Главная", path: "/" }, { label: "Услуги" }]}
+        items={[{ label: "Главная", path: "/drone_main" }, { label: "Услуги" }]}
       />
       <h1>Режимы полета дрона</h1>
 

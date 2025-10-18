@@ -16,7 +16,9 @@ export default function DroneServiceCard({ service }: { service: DroneService })
         <div className="service-title">{service.name}</div>
         <div className="category">Множитель мощности: {service.power_multiplier}</div>
         <div className="card-buttons">
-          <Link to={`/services/${service.id}`} className="details-btn">Подробнее</Link>
+          <Link to={`/drone_services/${service.id}`} className="details-btn">
+            Подробнее
+          </Link>
         </div>
       </div>
     </div>

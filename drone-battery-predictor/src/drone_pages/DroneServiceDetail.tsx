@@ -31,14 +31,14 @@ export default function DroneServiceDetail() {
   if (!service) return <p>Загрузка...</p>;
 
   return (
-    <div>
-      <DroneBreadcrumbs
-        items={[
-          { label: "Главная", path: "/" },
-          { label: "Услуги", path: "/services" },
-          { label: service.name },
-        ]}
-      />
+      <div>
+        <DroneBreadcrumbs
+          items={[
+            { label: "Главная", path: "/drone_main" },
+            { label: "Услуги", path: "/drone_services" },
+            { label: service.name },
+          ]}
+        />
 
       <div className="detail-card">
         <div className="detail-image">
