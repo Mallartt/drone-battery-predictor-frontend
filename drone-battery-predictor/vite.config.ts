@@ -1,18 +1,23 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
+import mkcert from "vite-plugin-mkcert";
+import fs from "fs";
+import path from "path";
+// VITE_PUBLIC_BASE_URL можно использовать для разных окружений
+const BASE_URL = process.env.NODE_ENV === "production"
+  ? "/drone-battery-predictor-frontend/"
+  : "/";
 
 export default defineConfig({
-  base: "/", // если деплой в https://<user>.github.io/<repo>
+  base: BASE_URL,
   server: {
-    port: 3000,
-    proxy: {
-      "/api": {
-        target: "http://127.0.0.1:8000",
-        changeOrigin: true,
-        secure: false,
+    https: {
+        key: fs.readFileSync(path.resolve(__dirname, "192.168.1.114+2-key.pem")),
+        cert: fs.readFileSync(path.resolve(__dirname, "192.168.1.114+2.pem"))
       },
-    },
+    host: true,  
+    port: 3000,
   },
   plugins: [
     react(),
@@ -34,4 +39,7 @@ export default defineConfig({
       },
     }),
   ],
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-router-dom"]
+  }
 });
