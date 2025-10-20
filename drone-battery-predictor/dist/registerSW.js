@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/drone-battery-predictor-frontend/sw.js', { scope: '/drone-battery-predictor-frontend/' })})}
