@@ -1,4 +1,4 @@
-/* src/store/index. */
+/* src/store/index.ts */
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import filterReducer from "../features/servicesFilter/filterSlice";

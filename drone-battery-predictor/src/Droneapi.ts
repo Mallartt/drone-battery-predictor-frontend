@@ -1,9 +1,15 @@
-/* Droneapi.ts */
 import type { DroneService } from "./DroneServiceTypes";
 
-export async function listServices(params?: { name?: string; date_from?: string; date_to?: string }): Promise<DroneService[]> {
+
+const API_BASE = "/api";
+
+export async function listServices(params?: {
+  name?: string;
+  date_from?: string;
+  date_to?: string;
+}): Promise<DroneService[]> {
   try {
-    let path = "/api/drone_services/";
+    let path = `${API_BASE}/drone_services/`;
     if (params) {
       const query = new URLSearchParams();
       if (params.name) query.append("drone_services_search", params.name);
@@ -24,7 +30,9 @@ export async function listServices(params?: { name?: string; date_from?: string;
 
 export async function getService(id: number): Promise<DroneService | null> {
   try {
-    const res = await fetch(`/api/drone_services/${id}/`, { headers: { Accept: "application/json" } });
+    const res = await fetch(`${API_BASE}/drone_services/${id}/`, {
+      headers: { Accept: "application/json" },
+    });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (err) {

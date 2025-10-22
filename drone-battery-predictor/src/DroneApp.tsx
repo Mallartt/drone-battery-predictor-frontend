@@ -13,7 +13,7 @@ export default function DroneApp() {
       <DroneAppNavbar />
       <Container className="app-container">
         <Routes>
-          <Route path="/drone_main" element={<DroneHome />} />
+          <Route path="/" element={<DroneHome />} />
           <Route path="/drone_services" element={<DroneServices />} />
           <Route path="/drone_services/:id" element={<DroneServiceDetail />} />
         </Routes>

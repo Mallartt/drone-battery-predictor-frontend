@@ -10,7 +10,7 @@ export default function DroneAppNavbar() {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav" className="justify-between">
           <Nav className="left-nav">
-            <Nav.Link as={Link} to="/drone_main">Главная</Nav.Link>
+            <Nav.Link as={Link} to="/">Главная</Nav.Link>
           </Nav>
 
           <Nav className="right-nav">
